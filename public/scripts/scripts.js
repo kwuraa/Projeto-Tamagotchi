@@ -54,6 +54,8 @@ function salvarEstado() {
 let { tamagotchiStatus, nomeTamagotchi } = inicializarTamagotchi();
 atualizarStatus();
 
+let dormindo = false;
+
 function alimentar() {
   tamagotchiStatus.fome = Math.min(tamagotchiStatus.fome + 10, 100);
   tamagotchiStatus.felicidade = Math.min(tamagotchiStatus.felicidade + 5, 100);
@@ -80,12 +82,23 @@ function brincar() {
 }
 
 function dormir() {
-  tamagotchiStatus.energia = Math.min(tamagotchiStatus.energia + 30, 100);
+  if (dormindo !== true) {
+    document.getElementById("energia-bar").value = tamagotchiStatus.energia;
+    dormindo = true;
+    console.log("dormindo ...");
 
-  document.getElementById("energia-bar").value = tamagotchiStatus.energia;
-
-  salvarEstado();
-  atualizarStatus();
+    const intervaloSono = setInterval(() => {
+      if (tamagotchiStatus.energia < 100) {
+        tamagotchiStatus.energia = Math.min(tamagotchiStatus.energia + 3, 100);
+        console.log(`energia: ${tamagotchiStatus.energia}`);
+        salvarEstado();
+        atualizarStatus();
+      } else {
+        clearInterval(intervaloSono);
+        dormindo = false;
+      }
+    }, 1000);
+  }
 }
 
 function limpar() {
