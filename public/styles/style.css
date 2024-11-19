@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121824;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+container {
+  text-align: center;
+}
+
+container .tamagotchi {
+  color: #fff;
+  background-color: #b3aae2;
+  border-radius: 25px;
+  min-height: 64vh;
+  min-width: 51vh;
+}
+
+div .moldura {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span#tamagotchiNome {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  gap: 13%;
+  padding: 0 20px;
+}
+.icons progress {
+  display: flex;
+}
+
+progress {
+  width: 60px;
+  height: 20px;
+}
+
+.tamagotchi .buttons {
+  border: none;
+  font-size: 40px;
+}
+
+.buttons button {
+  border: none;
+  background-color: transparent;
+  border-radius: 25%;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  color: #121620;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  display: flex;
+
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  color: #fff;
+}

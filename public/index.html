@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamagotchi</title>
+    <link rel="stylesheet" href="/public/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header></header>
+    <container>
+      <div class="tamagotchi">
+        <span id="tamagotchiNome"></span>
+        <div class="moldura">
+          <img
+            class="char"
+            src="https://media.tenor.com/Poq4-7SmZsMAAAAi/minecraft-minecraft-axolotl.gif"
+            alt="imagem tamagotchi"
+          />
+        </div>
+        <div class="status">
+          <p class="icons material-icons fome">
+            restaurant
+            <progress id="fome-bar" value="0" max="100"></progress>
+          </p>
+          <p class="icons material-icons energia">
+            bolt<progress id="energia-bar" value="0" max="100"></progress>
+          </p>
+          <p class="icons material-icons felicidade">
+            mood <progress id="felicidade-bar" value="0" max="100"></progress>
+          </p>
+        </div>
+        <div class="buttons">
+          <button onclick="alimentar()" id="alimentar" class="material-icons">
+            lunch_dining
+          </button>
+          <button onclick="brincar()" id="brincar" class="material-icons">
+            sports_soccer
+          </button>
+          <button onclick="dormir()" id="dormir" class="material-icons">
+            bedtime
+          </button>
+          <!-- <button onclick="limpar()" id="limpar" class="material-icons">
+            shower
+          </button> -->
+        </div>
+      </div>
+      <footer><span class="whaterMark">Study Project by @kwuraa</span></footer>
+    </container>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
