@@ -57,28 +57,44 @@ atualizarStatus();
 let dormindo = false;
 
 function alimentar() {
-  tamagotchiStatus.fome = Math.min(tamagotchiStatus.fome + 10, 100);
-  tamagotchiStatus.felicidade = Math.min(tamagotchiStatus.felicidade + 5, 100);
+  if (dormindo === false) {
+    tamagotchiStatus.fome = Math.min(tamagotchiStatus.fome + 10, 100);
+    tamagotchiStatus.felicidade = Math.min(
+      tamagotchiStatus.felicidade + 5,
+      100
+    );
 
-  document.getElementById("fome-bar").value = tamagotchiStatus.fome;
-  document.getElementById("felicidade-bar").value = tamagotchiStatus.felicidade;
+    document.getElementById("fome-bar").value = tamagotchiStatus.fome;
+    document.getElementById("felicidade-bar").value =
+      tamagotchiStatus.felicidade;
 
-  salvarEstado();
-  atualizarStatus();
+    salvarEstado();
+    atualizarStatus();
+  } else {
+    alert("O seu Tamagotchi está dormindo, não pode alimentar!");
+  }
 }
 
 function brincar() {
-  tamagotchiStatus.felicidade = Math.min(tamagotchiStatus.felicidade + 20, 100);
+  if (dormindo === false) {
+    tamagotchiStatus.felicidade = Math.min(
+      tamagotchiStatus.felicidade + 20,
+      100
+    );
 
-  if (tamagotchiStatus.energia > 0) {
-    tamagotchiStatus.energia = tamagotchiStatus.energia - 10;
+    if (tamagotchiStatus.energia > 0) {
+      tamagotchiStatus.energia = tamagotchiStatus.energia - 10;
+    }
+
+    document.getElementById("energia-bar").value = tamagotchiStatus.energia;
+    document.getElementById("felicidade-bar").value =
+      tamagotchiStatus.felicidade;
+
+    salvarEstado();
+    atualizarStatus();
+  } else {
+    alert("O seu Tamagotchi está dormindo, não pode brincar!");
   }
-
-  document.getElementById("energia-bar").value = tamagotchiStatus.energia;
-  document.getElementById("felicidade-bar").value = tamagotchiStatus.felicidade;
-
-  salvarEstado();
-  atualizarStatus();
 }
 
 function dormir() {
