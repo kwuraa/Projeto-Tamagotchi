@@ -1,26 +1,3 @@
-function inicializarTamagotchi() {
-  let tamagotchiStatus = localStorage.getItem("tamagotchiStatus");
-  let nomeTamagotchi = localStorage.getItem("tamagotchiNome");
-
-  if (
-    (tamagotchiStatus === null && nomeTamagotchi === null) ||
-    nomeTamagotchi === ""
-  ) {
-    tamagotchiStatus = {
-      fome: 50,
-      energia: 80,
-      felicidade: 100,
-    };
-    nomeTamagotchi = prompt("Digite o nome do seu Tamagotchi:");
-    localStorage.setItem("tamagotchiStatus", JSON.stringify(tamagotchiStatus));
-    localStorage.setItem("tamagotchiNome", nomeTamagotchi);
-  } else {
-    tamagotchiStatus = JSON.parse(tamagotchiStatus);
-  }
-  document.getElementById("tamagotchiNome").textContent = nomeTamagotchi;
-  return { tamagotchiStatus, nomeTamagotchi };
-}
-
 function atualizarStatus() {
   document.getElementById("fome-bar").value = tamagotchiStatus.fome;
   document.getElementById("energia-bar").value = tamagotchiStatus.energia;
@@ -28,7 +5,7 @@ function atualizarStatus() {
 }
 
 function timingStatus() {
-  Math.min((tamagotchiStatus.fome -= 5), 0);
+  Math.max(tamagotchiStatus.fome - 5, 0);
   Math.min((tamagotchiStatus.energia -= 3), 0);
   Math.min((tamagotchiStatus.felicidade -= 2), 0);
 
@@ -45,7 +22,7 @@ function health() {
   }
 }
 
-const intervaloStatus = setInterval(timingStatus, 25000);
+const intervaloStatus = setInterval(timingStatus, 111111000);
 
 function salvarEstado() {
   localStorage.setItem("tamagotchiStatus", JSON.stringify(tamagotchiStatus));
@@ -101,6 +78,7 @@ function dormir() {
   if (dormindo !== true) {
     document.getElementById("energia-bar").value = tamagotchiStatus.energia;
     dormindo = true;
+    clearInterval(intervaloStatus);
     console.log("dormindo ...");
 
     const intervaloSono = setInterval(() => {

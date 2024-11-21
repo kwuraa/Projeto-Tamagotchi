@@ -23,6 +23,7 @@ container .tamagotchi {
   border-radius: 25px;
   min-height: 64vh;
   min-width: 51vh;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 div .moldura {

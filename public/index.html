@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tamagotchi</title>
     <link rel="stylesheet" href="/public/styles/style.css" />
+    <link rel="stylesheet" href="/public/styles/modal.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -12,6 +13,13 @@
   </head>
   <body>
     <header></header>
+    <div id="modal" class="modal" style="display: none">
+      <div class="content-modal">
+        <h1>Bem Vindo ao Tamagotchi</h1>
+        <input id="nome-char" type="text" placeholder="Nome Do Tamagotchi" />
+        <button id="criar-char" type="submit">Criar</button>
+      </div>
+    </div>
     <container>
       <div class="tamagotchi">
         <span id="tamagotchiNome"></span>
@@ -53,6 +61,7 @@
         <span class="whaterMark">Study Project v0.1 by @kwuraa</span>
       </footer>
     </container>
+    <script src="scripts/modal.js"></script>
     <script src="scripts/scripts.js"></script>
   </body>
 </html>
