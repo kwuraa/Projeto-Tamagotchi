@@ -10,7 +10,6 @@ O projeto "Tamagotchi Virtual" é uma recriação digital do famoso brinquedo vi
 - **Brincar**: O botão de brincar permite que o usuário aumente a felicidade do Tamagotchi.
 - **Dormir**: O usuário pode colocar o Tamagotchi para dormir, o que ajuda a recuperar energia.
 - **Indicadores de Status**: O estado do Tamagotchi é mostrado através de barras de progresso que representam a fome, energia e felicidade.
-- **Feedback Visual**: O Tamagotchi exibe reações visuais e sonoras com base nas interações do usuário.
 
 ## Tecnologias Utilizadas
 
