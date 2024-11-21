@@ -1,37 +1,64 @@
+//? Refatorado
+
 const modal = document.getElementById("modal");
 
+function SalvarNomeTamagotchi(nomeChar) {
+  localStorage.setItem("tamagotchiNome", nomeChar);
+}
+
 function resgatarNome() {
-  document.getElementById("criar-char").addEventListener("click", () => {
-    localStorage.getItem("tamagotchiNome");
-    const nomeChar = document.getElementById("nome-char").value;
-    localStorage.setItem("tamagotchiNome", nomeChar);
+  const botaoCriarChar = document.getElementById("criar-char");
+  if (!botaoCriarChar) {
+    console.error("botão 'criar-Char' não encontrado!");
+    return;
+  }
 
+  botaoCriarChar.addEventListener("click", () => {
+    const nomeCharInput = document.getElementById("nome-char");
+    if (!nomeCharInput) {
+      console.error("input 'nome-char' não encontrado!");
+      return;
+    }
+
+    const nomeChar = nomeCharInput.value.trim();
+    if (nomeChar === "") {
+      alert("Por Favor, insira um nome válido!!");
+      return;
+    }
+
+    SalvarNomeTamagotchi(nomeChar);
     modal.style.display = "none";
-
-    location.reload();
+    atualizarInterface(nomeChar);
   });
+}
+
+function atualizarInterface(nomeTamagotchi) {
+  const nomeElemento = document.getElementById("tamagotchiNome");
+  if (nomeElemento) {
+    nomeElemento.textContent = nomeTamagotchi;
+  }
 }
 
 function inicializarTamagotchi() {
   let tamagotchiStatus = localStorage.getItem("tamagotchiStatus");
   let nomeTamagotchi = localStorage.getItem("tamagotchiNome");
 
-  if (
-    (tamagotchiStatus === null && nomeTamagotchi === null) ||
-    nomeTamagotchi === ""
-  ) {
+  if (!tamagotchiStatus || !nomeTamagotchi) {
     modal.style.display = "block";
     tamagotchiStatus = {
       fome: 50,
       energia: 80,
       felicidade: 100,
     };
-    // nomeTamagotchi = prompt("Digite o nome do seu Tamagotchi:");
+
     resgatarNome();
+
     localStorage.setItem("tamagotchiStatus", JSON.stringify(tamagotchiStatus));
   } else {
     tamagotchiStatus = JSON.parse(tamagotchiStatus);
+    atualizarInterface(nomeTamagotchi);
   }
-  document.getElementById("tamagotchiNome").textContent = nomeTamagotchi;
   return { tamagotchiStatus, nomeTamagotchi };
 }
+
+window.onload = inicializarTamagotchi;

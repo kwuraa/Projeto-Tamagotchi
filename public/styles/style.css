@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Parkinsans", sans-serif;
 }
 
 body {
@@ -34,10 +35,12 @@ div .moldura {
 }
 
 span#tamagotchiNome {
+  text-transform: uppercase;
   padding-top: 20px;
   display: flex;
   justify-content: center;
   font-size: 25px;
+  color: #232a3d;
 }
 
 .status {
@@ -77,9 +80,34 @@ progress {
 
 footer {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 75%;
+  width: 100%;
 
   position: absolute;
-  right: 15px;
+
   bottom: 10px;
+  margin: 0px 20px;
   color: #fff;
+}
+footer button {
+  color: #232a3d;
+  background-color: #b3aae2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  border: none;
+  border-radius: 15px;
+  margin-left: 20px;
+
+  width: 50px;
+  height: 35px;
+}
+
+footer button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #232a3d;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

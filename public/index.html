@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="br">
+<html lang="pt_BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,15 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header></header>
-    <div id="modal" class="modal" style="display: none">
+    <div id="modal" class="modal">
       <div class="content-modal">
         <h1>Bem Vindo ao Tamagotchi</h1>
         <input id="nome-char" type="text" placeholder="Nome Do Tamagotchi" />
@@ -22,7 +27,7 @@
     </div>
     <container>
       <div class="tamagotchi">
-        <span id="tamagotchiNome"></span>
+        <span class="tamagotchi-nome" id="tamagotchiNome"></span>
         <div class="moldura">
           <img
             class="char"
@@ -57,10 +62,13 @@
           </button> -->
         </div>
       </div>
-      <footer>
-        <span class="whaterMark">Study Project v0.1 by @kwuraa</span>
-      </footer>
     </container>
+    <footer>
+      <button class="botao-reset material-icons" onclick="reset()">
+        restart_alt
+      </button>
+      <span class="whaterMark">Study Project v0.1 by @kwuraa</span>
+    </footer>
     <script src="scripts/modal.js"></script>
     <script src="scripts/scripts.js"></script>
   </body>
