@@ -1,6 +1,8 @@
 //? Refatorado
 
 const modal = document.getElementById("modal");
+let tamagotchiCriado = false;
+let intervaloStatus;
 
 function SalvarNomeTamagotchi(nomeChar) {
   localStorage.setItem("tamagotchiNome", nomeChar);
@@ -29,6 +31,9 @@ function resgatarNome() {
     SalvarNomeTamagotchi(nomeChar);
     modal.style.display = "none";
     atualizarInterface(nomeChar);
+    tamagotchiCriado = true;
+    iniciarTimer();
+    location.reload();
   });
 }
 
@@ -51,11 +56,15 @@ function inicializarTamagotchi() {
       felicidade: 100,
     };
 
+    tamagotchiCriado = false;
+    pararTimer();
     resgatarNome();
 
     localStorage.setItem("tamagotchiStatus", JSON.stringify(tamagotchiStatus));
   } else {
     tamagotchiStatus = JSON.parse(tamagotchiStatus);
+    tamagotchiCriado = true;
+    iniciarTimer();
     atualizarInterface(nomeTamagotchi);
   }
   return { tamagotchiStatus, nomeTamagotchi };
