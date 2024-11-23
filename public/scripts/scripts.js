@@ -29,7 +29,7 @@ function verificarSaude() {
   }
 }
 
-const intervaloStatus = setInterval(timingStatus, 10000);
+const intervaloStatus = setInterval(timingStatus, 20000);
 
 function salvarEstado() {
   localStorage.setItem("tamagotchiStatus", JSON.stringify(tamagotchiStatus));

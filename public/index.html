@@ -23,17 +23,35 @@
         <h1>Bem Vindo ao Tamagotchi</h1>
         <input id="nome-char" type="text" placeholder="Nome Do Tamagotchi" />
         <button id="criar-char" type="submit">Criar</button>
+        <div class="personagens-content">
+          <div class="personagens">
+            <button id="allay">
+              <img src="img/allaygif.gif" alt="alay.gif" />
+            </button>
+            <button id="axolotl">
+              <img src="img/axolotl.gif" alt="axolotl.gif" />
+            </button>
+            <button id="bee"><img src="img/bee.gif" alt="bee.gif" /></button>
+          </div>
+          <div class="personagens">
+            <button id="breeze">
+              <img src="img/breeze.gif" alt="breeze.gif" />
+            </button>
+            <button id="silverfish">
+              <img src="img/silverfish.gif" alt="silverfish" />
+            </button>
+            <button id="dolphin">
+              <img src="img/dolphin.gif" alt="dolphin.gif" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <container>
       <div class="tamagotchi">
         <span class="tamagotchi-nome" id="tamagotchiNome"></span>
         <div class="moldura">
-          <img
-            class="char"
-            src="https://media.tenor.com/Poq4-7SmZsMAAAAi/minecraft-minecraft-axolotl.gif"
-            alt="imagem tamagotchi"
-          />
+          <img class="char" src="img/allaygif.gif" alt="imagem tamagotchi" />
         </div>
         <div class="status">
           <p class="icons material-icons fome">
@@ -51,11 +69,11 @@
           <button onclick="alimentar()" id="alimentar" class="material-icons">
             lunch_dining
           </button>
-          <button onclick="brincar()" id="brincar" class="material-icons">
-            sports_soccer
-          </button>
           <button onclick="dormir()" id="dormir" class="material-icons">
             bedtime
+          </button>
+          <button onclick="brincar()" id="brincar" class="material-icons">
+            sports_soccer
           </button>
           <!-- <button onclick="limpar()" id="limpar" class="material-icons">
             shower

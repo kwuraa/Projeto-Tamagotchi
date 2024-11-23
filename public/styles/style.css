@@ -28,7 +28,7 @@ container .tamagotchi {
 }
 
 div .moldura {
-  height: 350px;
+  margin: 15% 0;
   display: flex;
   justify-content: center;
   align-items: center;

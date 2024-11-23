@@ -13,13 +13,13 @@
   display: block;
   text-align: center;
 
-  margin: 15% auto;
+  margin: 13% auto;
   padding: 20px;
 
   border-radius: 10px;
 
   width: 40%;
-  height: 30%;
+  height: auto;
 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   background-color: #b3aae2;
@@ -65,4 +65,29 @@ button#criar-char:hover {
   background-color: #232a3d;
   transform: scale(1.2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.personagens-content {
+  margin: 5% 0;
+}
+
+.personagens {
+  display: flex;
+}
+
+.personagens img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.personagens button {
+  border: none;
+  background-color: transparent;
+
+  width: 50%;
+  height: auto;
+}
+
+.personagens button:active {
+  background-color: blue;
 }
