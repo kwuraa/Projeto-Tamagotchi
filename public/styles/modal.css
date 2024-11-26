@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .content-modal {
@@ -14,11 +14,11 @@
   text-align: center;
 
   margin: 13% auto;
-  padding: 20px;
+  padding: 20px 35px;
 
   border-radius: 10px;
 
-  width: 40%;
+  width: 45%;
   height: auto;
 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -73,6 +73,7 @@ button#criar-char:hover {
 
 .personagens {
   display: flex;
+  gap: 6%;
 }
 
 .personagens img {
@@ -82,6 +83,7 @@ button#criar-char:hover {
 
 .personagens button {
   border: none;
+  border-radius: 50px;
   background-color: transparent;
 
   width: 50%;
@@ -89,5 +91,12 @@ button#criar-char:hover {
 }
 
 .personagens button:active {
-  background-color: blue;
+  background-color: rgb(18, 34, 26, 0.3);
+}
+
+.personagens button:hover {
+  cursor: pointer;
+  border-color: #232a3d;
+  transform: scale(1.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -70,4 +70,13 @@ function inicializarTamagotchi() {
   return { tamagotchiStatus, nomeTamagotchi };
 }
 
+document.querySelectorAll("#select-chars button").forEach((botao) => {
+  botao.addEventListener("click", (event) => {
+    const charSelection = event.currentTarget.dataset.img;
+
+    atualizarVisualização(charSelection);
+    localStorage.setItem("imagemSelecionada", charSelection);
+  });
+});
+
 window.onload = inicializarTamagotchi;

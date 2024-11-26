@@ -34,6 +34,12 @@ div .moldura {
   align-items: center;
 }
 
+.moldura img {
+  display: none;
+  max-width: 38%;
+  min-width: 78%;
+}
+
 span#tamagotchiNome {
   text-transform: uppercase;
   padding-top: 20px;

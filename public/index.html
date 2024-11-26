@@ -23,24 +23,26 @@
         <h1>Bem Vindo ao Tamagotchi</h1>
         <input id="nome-char" type="text" placeholder="Nome Do Tamagotchi" />
         <button id="criar-char" type="submit">Criar</button>
-        <div class="personagens-content">
+        <div id="select-chars" class="personagens-content">
           <div class="personagens">
-            <button id="allay">
+            <button data-img="img/allaygif.gif" id="allay">
               <img src="img/allaygif.gif" alt="alay.gif" />
             </button>
-            <button id="axolotl">
+            <button data-img="img/axolotl.gif" id="axolotl">
               <img src="img/axolotl.gif" alt="axolotl.gif" />
             </button>
-            <button id="bee"><img src="img/bee.gif" alt="bee.gif" /></button>
+            <button data-img="img/bee.gif" id="bee">
+              <img src="img/bee.gif" alt="bee.gif" />
+            </button>
           </div>
           <div class="personagens">
-            <button id="breeze">
+            <button data-img="img/breeze.gif" id="breeze">
               <img src="img/breeze.gif" alt="breeze.gif" />
             </button>
-            <button id="silverfish">
+            <button data-img="img/silverfish.gif" id="silverfish">
               <img src="img/silverfish.gif" alt="silverfish" />
             </button>
-            <button id="dolphin">
+            <button data-img="img/dolphin.gif" id="dolphin">
               <img src="img/dolphin.gif" alt="dolphin.gif" />
             </button>
           </div>
@@ -51,7 +53,7 @@
       <div class="tamagotchi">
         <span class="tamagotchi-nome" id="tamagotchiNome"></span>
         <div class="moldura">
-          <img class="char" src="img/allaygif.gif" alt="imagem tamagotchi" />
+          <img id="avatar" class="char" src="" alt="imagem tamagotchi" />
         </div>
         <div class="status">
           <p class="icons material-icons fome">
@@ -88,6 +90,7 @@
       <span class="whaterMark">Study Project v0.1-beta by @kwuraa</span>
     </footer>
     <script src="scripts/modal.js"></script>
+    <script src="scripts/avatar.js"></script>
     <script src="scripts/scripts.js"></script>
   </body>
 </html>
