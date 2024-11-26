@@ -39,7 +39,7 @@ Contribuições são bem-vindas! Se você quiser adicionar novas funcionalidades
 
 ## Licença
 
-Este projeto é um projeto de estudo e está disponível para uso pessoal e educacional. Qualquer uso comercial deve ser discutido com o autor.
+Este projeto é um projeto de estudo e está disponível para uso pessoal e educacional.
 
 ## Contato
 
