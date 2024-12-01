@@ -1,4 +1,7 @@
 //? Refatorado
+const morte = document.getElementById("modal-morte");
+const mortemsg = document.getElementById("msg-morte");
+const mortebtn = document.getElementById("btn-morte");
 
 function atualizarBarra(elementoId, valor) {
   const barra = document.getElementById(elementoId);
@@ -23,10 +26,14 @@ function timingStatus() {
 
 function verificarSaude() {
   if (tamagotchiStatus.fome <= 0 || tamagotchiStatus.energia <= 0) {
-    localStorage.clear();
-    alert(`${nomeTamagotchi} Morreu!! crie um novo!`);
-    location.reload();
+    morte.style.display = "block";
+    mortemsg.innerText = `${nomeTamagotchi} Morreu!! crie um novo!`;
   }
+}
+
+function criarNovo() {
+  localStorage.clear();
+  location.reload();
 }
 
 function iniciarTimer() {

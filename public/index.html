@@ -6,6 +6,7 @@
     <title>Tamagotchi</title>
     <link rel="stylesheet" href="/public/styles/style.css" />
     <link rel="stylesheet" href="/public/styles/modal.css" />
+    <link rel="stylesheet" href="/public/styles/morte.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -83,6 +84,12 @@
         </div>
       </div>
     </container>
+    <div id="modal-morte" class="modal-morte">
+      <div class="content-modal">
+        <h1 id="msg-morte"></h1>
+        <button onclick="criarNovo()" id="novo-char">Crie um novo char</button>
+      </div>
+    </div>
     <footer>
       <button class="botao-reset material-icons" onclick="reset()">
         restart_alt

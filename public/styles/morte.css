@@ -1,0 +1,36 @@
+.modal-morte {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-morte div {
+  height: 30%;
+}
+.modal-morte div h1 {
+  padding-top: 5%;
+}
+button#novo-char {
+  color: #fff;
+  background-color: #121824;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  border: none;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-top: 10%;
+
+  width: 200px;
+  height: 50px;
+}
+
+button#novo-char:hover {
+  cursor: pointer;
+  background-color: #232a3d;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
