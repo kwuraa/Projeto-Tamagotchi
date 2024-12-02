@@ -19,16 +19,21 @@ container {
 }
 
 container .tamagotchi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+
   color: #fff;
   background-color: #b3aae2;
   border-radius: 25px;
-  min-height: 64vh;
-  min-width: 51vh;
+  height: 86vh;
+  width: 55vh;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 div .moldura {
-  margin: 15% 0;
+  margin: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
