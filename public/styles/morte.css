@@ -9,11 +9,16 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-morte div {
-  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin: 3% 0;
+  height: 20%;
+
+  animation: morte 2s ease 0s 1 normal backwards;
 }
-.modal-morte div h1 {
-  padding-top: 5%;
-}
+
 button#novo-char {
   color: #fff;
   background-color: #121824;
@@ -21,8 +26,6 @@ button#novo-char {
 
   border: none;
   border-radius: 15px;
-  margin-left: 20px;
-  margin-top: 10%;
 
   width: 200px;
   height: 50px;
@@ -33,4 +36,16 @@ button#novo-char:hover {
   background-color: #232a3d;
   transform: scale(1.2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes morte {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

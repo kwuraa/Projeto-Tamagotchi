@@ -1,5 +1,4 @@
 //? Refatorado
-
 const modal = document.getElementById("modal");
 let tamagotchiCriado = false;
 let intervaloStatus;
@@ -70,9 +69,16 @@ function inicializarTamagotchi() {
   return { tamagotchiStatus, nomeTamagotchi };
 }
 
-document.querySelectorAll("#select-chars button").forEach((botao) => {
+const buttons = document.querySelectorAll("#select-chars button");
+
+buttons.forEach((botao) => {
   botao.addEventListener("click", (event) => {
     const charSelection = event.currentTarget.dataset.img;
+
+    // Remove a marcação de todos os botões
+    buttons.forEach((btn) => btn.classList.remove("marked"));
+    // Marca o botão clicado
+    botao.classList.add("marked");
 
     atualizarVisualização(charSelection);
     localStorage.setItem("imagemSelecionada", charSelection);

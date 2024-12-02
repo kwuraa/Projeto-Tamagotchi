@@ -82,7 +82,7 @@ button#criar-char:hover {
 }
 
 .personagens button {
-  border: none;
+  border: transparent;
   border-radius: 50px;
   background-color: transparent;
 
@@ -92,6 +92,10 @@ button#criar-char:hover {
 
 .personagens button:active {
   background-color: rgb(18, 34, 26, 0.3);
+}
+
+.personagens button.marked {
+  background-color: rgb(18, 34, 26, 0.5);
 }
 
 .personagens button:hover {

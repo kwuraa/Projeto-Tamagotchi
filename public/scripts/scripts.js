@@ -15,9 +15,9 @@ function atualizarStatus() {
 }
 
 function timingStatus() {
-  tamagotchiStatus.fome = Math.max(tamagotchiStatus.fome - 5, 0);
-  tamagotchiStatus.energia = Math.max(tamagotchiStatus.energia - 3, 0);
-  tamagotchiStatus.felicidade = Math.max(tamagotchiStatus.felicidade - 2, 0);
+  tamagotchiStatus.fome = Math.max(tamagotchiStatus.fome - 2, 0);
+  tamagotchiStatus.energia = Math.max(tamagotchiStatus.energia - 1.5, 0);
+  tamagotchiStatus.felicidade = Math.max(tamagotchiStatus.felicidade - 0.5, 0);
 
   atualizarStatus();
   salvarEstado();
@@ -27,7 +27,7 @@ function timingStatus() {
 function verificarSaude() {
   if (tamagotchiStatus.fome <= 0 || tamagotchiStatus.energia <= 0) {
     morte.style.display = "block";
-    mortemsg.innerText = `${nomeTamagotchi} Morreu!! crie um novo!`;
+    mortemsg.innerText = `${nomeTamagotchi} Morreu!!`;
   }
 }
 
@@ -42,7 +42,7 @@ function iniciarTimer() {
       if (tamagotchiCriado) {
         timingStatus();
       }
-    }, 20000);
+    }, 200);
   }
 }
 
