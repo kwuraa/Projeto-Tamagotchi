@@ -42,7 +42,7 @@ function iniciarTimer() {
       if (tamagotchiCriado) {
         timingStatus();
       }
-    }, 200);
+    }, 20000);
   }
 }
 
